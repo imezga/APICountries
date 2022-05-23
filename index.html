@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>Countries API</title>
+  </head>
+  <body class="light-bg">
+    <header class="light">
+      <h3>Where in the world?</h3>
+      <div class="mode-button">
+        <i id="moon" class="fa-regular fa-moon"></i>
+        <p id="dark">Dark Mode</p>
+      </div>
+    </header>
+    <main class="light-bg">
+      <div id="country-details" class="light-bg"></div>
+      <div class="search-bar">
+        <div class="input" id="country-input">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input placeholder="Search for a country..." type="text" />
+        </div>
+        <select class="light" name="region" id="region">
+          <option value="Filter by Region" disabled selected>Filter by Region</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+      <div class="country-list"></div>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
