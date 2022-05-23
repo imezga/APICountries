@@ -65,7 +65,7 @@ const listCountries = (response) => {
   response.map((country) => {
     const { name, population, region, capital, flags } = country;
     countries += `
-      <div class="country light" data-name=${name.common}>
+      <div class="country" data-name=${name.common}>
         <img src=${flags.svg} alt=${name.common}>
         <div class="content">
           <h2>${name.common}</h2>
@@ -82,6 +82,11 @@ const listCountries = (response) => {
   countryList.innerHTML = countries;
   const allListedCountries = document.querySelectorAll('.country');
   allListedCountries.forEach((e) => {
+    if (document.body.className === 'light-bg') {
+      e.className = 'country light';
+    } else {
+      e.className = 'country dark';
+    }
     e.addEventListener('click', (e) => {
       const value = e.target.parentElement.dataset.name;
 
